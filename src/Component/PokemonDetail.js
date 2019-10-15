@@ -1,18 +1,13 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import PokeList from "./PokeList";
 import axios from "axios";
-import "./style.css";
-  
-  const PokemonDetail = () => {
-    return (
-      <section className="detail-view">
-        <img className='sprite-image'/>
-        <div className='data-wrapper'>
-          <h1 className='data-name'></h1>
-          <p className='data-char'></p>
-          <p className='data-char'></p>
-        </div>
-      </section>
-    )
-  }
+import Form from "./Form";
 
-export default PokemonDetail;
+class Pokemon extends Component {
+  render() {
+    return <div />;
+  }
+}
+
+export default Pokemon;
