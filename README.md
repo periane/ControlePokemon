@@ -1,2 +1,0 @@
-# ControlePokemon
-Created with CodeSandbox
