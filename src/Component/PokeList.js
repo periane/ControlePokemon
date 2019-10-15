@@ -21,7 +21,6 @@ class PokeList extends Component {
             type="text"
             name="search-input"
             placeholder="Search..."
-            onChange={this.handleOnInputChange}
           />
         <button
               className="submit-button"

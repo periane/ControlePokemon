@@ -13,23 +13,24 @@ class ItemPokemon extends Component {
     name: "",
     imageUrl: "",
     pokemonIndex: "",
+    detail: "",
     imageLoading: true,
     toManyRequests: false
   };
 
   componentDidMount() {
-    const { name, url } = this.props;
+    const { name,detail, url } = this.props;
     const pokemonIndex = url.split("/")[url.split("/").length - 2];
     const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
 
-    this.setState({ name, imageUrl, pokemonIndex 
+    this.setState({ name, imageUrl,detail, pokemonIndex,
     });
   }
 
   render() {
     return (
       <div className="col-md-3 col-sm-6 mb-5 container-movie">
-        <Link to={`pokemon/${this.state.pokemonIndex}/${this.state.name}`}>
+        <Link to={`pokemon/${this.state.pokemonIndex}/${this.state.name}/${this.state.detail}`}>
           <div className="card">
             <h5 className="card-header">{this.state.pokemonIndex}</h5>
             <Show

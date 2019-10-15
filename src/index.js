@@ -10,14 +10,19 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <NavBar />
-      <div className="container">
-      <Switch>
-      <Route exact path="/" component={Dashboard} />
-      <Route exact path="/component/:pokemonIndex" component={PokemonDetail} />
-      </Switch>
+        <NavBar />
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={Dashboard} />
+            <Route
+              exact
+              path="/component/:pokemonIndex"
+              component={PokemonDetail}
+            />
+            <PokemonDetail />
+          </Switch>
+        </div>
       </div>
-    </div>
     </Router>
   );
 }
